@@ -27,20 +27,12 @@ target 'ClosetFairy' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'react-native-geolocation', path: '../node_modules/@react-native-community/geolocation'
+
   target 'ClosetFairyTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
   use_native_modules!
-end
-
-target 'ClosetFairy-tvOS' do
-  # Pods for ClosetFairy-tvOS
-
-  target 'ClosetFairy-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
