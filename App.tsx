@@ -10,7 +10,7 @@ export interface AppProps {}
 
 const App: React.SFC<AppProps> = () => {
   const [isLoading, setLoading] = React.useState(true);
-  const [id, setId] = React.useState(null);
+  const [id, setId] = React.useState<number | null>(null);
 
   console.log(id);
 
@@ -22,17 +22,22 @@ const App: React.SFC<AppProps> = () => {
     Geolocation.getCurrentPosition(
       position => {
         setLoading(false);
-        _getId(position.coords);
+
+        const lon2 = position.coords.longitude;
+        const lat2 = position.coords.latitude;
+        _getId(lon2, lat2);
       },
       error => {
         console.log(error.code, error.message);
       },
-      {enableHighAccuracy: false, timeout: 15000, maximumAge: 10000},
+      {enableHighAccuracy: false, timeout: 15000, maximumAge: 60000},
     );
 
     Geolocation.watchPosition(
       position => {
-        _getId(position.coords);
+        const lon2 = position.coords.longitude;
+        const lat2 = position.coords.latitude;
+        _getId(lon2, lat2);
       },
       error => {
         console.log(error.code, error.message);
@@ -43,10 +48,7 @@ const App: React.SFC<AppProps> = () => {
     );
   };
 
-  const _getId = data => {
-    const lon2 = data.longitude;
-    const lat2 = data.latitude;
-
+  const _getId = (lon2: number, lat2: number) => {
     let distArr: number[] = [];
     cityUS.map(city => {
       const lon1 = city.coord.lon;
@@ -57,7 +59,6 @@ const App: React.SFC<AppProps> = () => {
 
       const distance = Math.sqrt(Math.pow(lon, 2) + Math.pow(lat, 2));
       distArr.push(distance);
-      // console.log(distance);
     });
     const newDistArr = [...distArr];
     newDistArr.sort((a, b) => {
@@ -65,7 +66,7 @@ const App: React.SFC<AppProps> = () => {
     });
 
     const i = distArr.indexOf(newDistArr[0]);
-    // console.log(cityUS[i].id);
+    console.log(cityUS[i].name);
     setId(cityUS[i].id);
   };
 
