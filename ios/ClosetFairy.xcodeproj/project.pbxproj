@@ -13,6 +13,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		49883E63FD86DA62DCF9AB9E /* libPods-ClosetFairyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B6B12D04B79D5304A99B9A /* libPods-ClosetFairyTests.a */; };
+		5507E60F23EE65D100787B03 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5507E60E23EE65D100787B03 /* GoogleService-Info.plist */; };
 		C403C9DAA8D1EC03281F1943 /* libPods-ClosetFairy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51CF621C7919DA8F90EF56 /* libPods-ClosetFairy.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		28C889644539D684B32698F6 /* Pods-ClosetFairy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClosetFairy.debug.xcconfig"; path = "Target Support Files/Pods-ClosetFairy/Pods-ClosetFairy.debug.xcconfig"; sourceTree = "<group>"; };
 		44F58151F10B936A30C4C2E5 /* Pods-ClosetFairy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClosetFairy.release.xcconfig"; path = "Target Support Files/Pods-ClosetFairy/Pods-ClosetFairy.release.xcconfig"; sourceTree = "<group>"; };
 		4777242CC3EFBBEB11EE9032 /* Pods-ClosetFairy-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClosetFairy-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ClosetFairy-tvOSTests/Pods-ClosetFairy-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5507E60E23EE65D100787B03 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6DC1456D2468F53CEC1D67A7 /* Pods-ClosetFairy-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClosetFairy-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ClosetFairy-tvOS/Pods-ClosetFairy-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8E0E15DB65E079E95D127DB8 /* Pods-ClosetFairy-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClosetFairy-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ClosetFairy-tvOSTests/Pods-ClosetFairy-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4A9384276BF82ED35D67667 /* Pods-ClosetFairyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClosetFairyTests.release.xcconfig"; path = "Target Support Files/Pods-ClosetFairyTests/Pods-ClosetFairyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				5507E60E23EE65D100787B03 /* GoogleService-Info.plist */,
 			);
 			name = ClosetFairy;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				5507E60F23EE65D100787B03 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +449,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.doma.ClosetFairy;
 				PRODUCT_NAME = ClosetFairy;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -465,7 +469,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.doma.ClosetFairy;
 				PRODUCT_NAME = ClosetFairy;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
